@@ -15,3 +15,4 @@ brew update
 # Brewパッケージのインストール
 echo "Installing brew packages..."
 brew install emacs
+brew install tmux
