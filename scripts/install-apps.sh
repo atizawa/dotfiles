@@ -23,6 +23,7 @@ brew install --cask chatgpt
 brew install --cask raycast
 brew install --cask rectangle
 brew install --cask cursor
+brew install --cask ghostty
 
 # 完了メッセージ
 echo "Application installation complete!"
