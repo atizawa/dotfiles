@@ -1,5 +1,5 @@
 #!/bin/sh
-64;2500;0c
+
 # Homebrewのインストール
 if ! command -v brew &> /dev/null; then
     echo "Installing Homebrew..."
