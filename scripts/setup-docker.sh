@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# docker composeプラグインの設定
+mkdir -p ~/.docker/cli-plugins
+ln -sf "$(which docker-compose)" ~/.docker/cli-plugins/docker-compose
+
 # Colimaの自動起動設定
 COLIMA_PATH="$(which colima)"
 PLIST_PATH="$HOME/Library/LaunchAgents/com.colima.autostart.plist"
@@ -26,4 +30,4 @@ EOF
 launchctl unload "$PLIST_PATH" 2>/dev/null
 launchctl load "$PLIST_PATH"
 
-echo "Colima autostart setup complete!"
+echo "Docker setup complete!"
