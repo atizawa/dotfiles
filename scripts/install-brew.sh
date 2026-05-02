@@ -15,3 +15,5 @@ brew update
 # Brewパッケージのインストール
 echo "Installing brew packages..."
 brew install emacs
+
+echo "Brew package installation complete!"
