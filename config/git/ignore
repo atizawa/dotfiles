@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Claude Codeの端末固有設定
+**/.claude/settings.local.json

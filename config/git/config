@@ -1,0 +1,36 @@
+[init]
+    defaultBranch = main
+
+[core]
+    editor = emacs -nw
+    excludesFile = ~/.config/git/ignore
+
+[fetch]
+    prune = true
+
+[push]
+    default = simple
+    autoSetupRemote = true
+
+[diff]
+    algorithm = histogram
+    colorMoved = zebra
+
+[merge]
+    conflictStyle = zdiff3
+
+[rerere]
+    enabled = true
+
+[commit]
+    verbose = true
+
+[rebase]
+    autoStash = true
+
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+[include]
+    path = ~/.config/git/local
