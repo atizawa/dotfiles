@@ -1,0 +1,29 @@
+[tools]
+shellcheck = "latest"
+shfmt = "latest"
+
+[tasks.check]
+description = "すべての設定ファイルを検証"
+depends = ["check:shell", "check:shellcheck", "check:format", "check:brewfile"]
+
+[tasks."check:shell"]
+description = "シェルスクリプトと.zshrcの構文を検証"
+run = [
+    'for script in scripts/*.sh; do sh -n "$script"; done',
+    "zsh -n .zshrc",
+]
+
+[tasks."check:shellcheck"]
+description = "シェルスクリプトをShellCheckで検証"
+run = "shellcheck --shell=sh scripts/*.sh"
+
+[tasks."check:format"]
+description = "シェルスクリプトのフォーマットを検証"
+run = "shfmt --diff --indent 4 --case-indent scripts/*.sh"
+
+[tasks."check:brewfile"]
+description = "Brewfileを検証"
+run = [
+    "HOMEBREW_NO_AUTO_UPDATE=1 brew bundle list --formula --file=./Brewfile >/dev/null",
+    "HOMEBREW_NO_AUTO_UPDATE=1 brew bundle list --cask --file=./Brewfile >/dev/null",
+]

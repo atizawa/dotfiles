@@ -1,0 +1,15 @@
+[tools]
+node = "24.22.2"
+python = "3.14.10"
+rust = "1.99.1"
+tmux = "3.8"
+codex = "latest"
+claude = "latest"
+gh = "latest"
+pkl = "latest"
+herdr = "latest"
+docker-cli = "29.9.3"
+lima = "2.3.0"
+colima = "0.10.3"
+docker-compose = "5.7.0"
+"github:docker/buildx" = { version = "0.38.2", asset_pattern = "buildx-v*.darwin-arm64", bin = "docker-buildx" }
